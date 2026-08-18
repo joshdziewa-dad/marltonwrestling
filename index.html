@@ -652,7 +652,7 @@ function renderContent(){
     if(multiPos){
       const details = document.createElement('details');
       details.className = 'pos-block';
-      if(blockIdx === 0) details.open = true;
+      // all position blocks start closed for a clean, uniform row
       const summary = document.createElement('summary');
       summary.innerHTML = `<span class="num">${pos.idx + 1}</span> ${pos.title}`;
       details.appendChild(summary);
