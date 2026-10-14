@@ -435,23 +435,23 @@
       <h1>The Chief <span>Standard</span></h1>
     </div>
     <div class="header-meta">
-      Curriculum &middot; Schedule<br>
+      Schedule &middot; Curriculum<br>
       Tap a technique to watch
     </div>
   </header>
 
   <div class="view-tabs" id="viewTabs">
-    <div class="view-tab active" data-view="curriculum">Curriculum</div>
-    <div class="view-tab" data-view="schedule">Schedule</div>
+    <div class="view-tab active" data-view="schedule">Schedule</div>
+    <div class="view-tab" data-view="curriculum">Curriculum</div>
   </div>
 
-  <div id="view-curriculum">
+  <div id="view-curriculum" hidden>
     <div class="lvl-tabs" id="lvlTabs"></div>
     <div class="pos-tabs" id="posTabs"></div>
     <div id="content"></div>
   </div>
 
-  <div id="view-schedule" hidden>
+  <div id="view-schedule">
     <p class="sch-lede">Open youth tournaments (Tot through Intermediate / 6U&ndash;14U) and girls divisions within reach of Burlington and Camden County, plus a few worth the trip into PA, MD, DE and beyond. Our SJWL duals and league tournaments are on their own tab.</p>
     <div class="sch-stats" id="schStats"></div>
 
@@ -987,7 +987,7 @@ document.getElementById("schNear").onclick=()=>{schState.near=!schState.near;ren
 schStats();
 renderSchedule();
 renderLeague();
-if(location.hash==="#schedule")showView("schedule");
+if(location.hash==="#curriculum")showView("curriculum");
 </script>
 
 </body>
