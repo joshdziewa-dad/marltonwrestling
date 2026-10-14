@@ -277,6 +277,100 @@
     letter-spacing:.04em;
   }
 
+
+  [hidden]{display:none !important;}
+
+  /* VIEW SWITCH (Curriculum / Schedule) */
+  .view-tabs{
+    display:flex;
+    gap:0;
+    margin-bottom:22px;
+    border-bottom:2px solid var(--line);
+  }
+  .view-tab{
+    font-family:'Oswald',sans-serif;
+    font-size:16px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    font-weight:600;
+    padding:12px 22px;
+    cursor:pointer;
+    color:var(--text-faint);
+    border-bottom:3px solid transparent;
+    margin-bottom:-2px;
+    transition:color .15s, border-color .15s;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .view-tab:hover{color:var(--text);}
+  .view-tab.active{color:var(--orange); border-bottom-color:var(--orange);}
+
+  /* SCHEDULE */
+  .sch-lede{color:var(--text-dim); font-size:14px; line-height:1.55; max-width:68ch; margin:0 0 14px;}
+  .sch-stats{display:flex; flex-wrap:wrap; gap:8px 22px; margin-bottom:22px; font-size:12.5px; color:var(--text-faint);}
+  .sch-stats b{font-family:'Oswald',sans-serif; font-size:22px; color:var(--orange); margin-right:5px; font-weight:600;}
+
+  .sch-filters{
+    position:sticky; top:0; z-index:5;
+    background:var(--black);
+    padding:12px 0;
+    margin-bottom:6px;
+    border-bottom:1px solid var(--line);
+    display:flex; flex-direction:column; gap:8px;
+  }
+  .sch-row{display:flex; flex-wrap:wrap; gap:6px; align-items:center;}
+  .sch-row .lbl{
+    font-family:'Oswald',sans-serif; font-weight:600; font-size:12px;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--text-faint); min-width:52px;
+  }
+  .chip{
+    font-family:'Oswald',sans-serif; font-size:12px; letter-spacing:.05em; text-transform:uppercase; font-weight:600;
+    padding:8px 15px; border-radius:20px; cursor:pointer;
+    color:var(--text-faint); border:1px solid var(--line); background:transparent;
+    transition:all .15s; -webkit-tap-highlight-color:transparent;
+  }
+  .chip:hover{color:var(--text); border-color:var(--orange-dim);}
+  .chip.active{color:var(--amber); border-color:var(--amber); background:rgba(255,179,71,0.08);}
+  .sch-count{font-size:12.5px; color:var(--text-faint); margin-left:auto;}
+
+  .sch-month{margin-top:26px;}
+  .sch-month h2{
+    font-family:'Oswald',sans-serif; font-weight:700; font-size:20px; text-transform:uppercase; letter-spacing:.05em;
+    margin:0 0 10px; display:flex; align-items:baseline; gap:10px; color:var(--text);
+  }
+  .sch-month h2 small{font:500 12.5px 'Inter',sans-serif; color:var(--text-faint); text-transform:none; letter-spacing:0;}
+
+  .ev{
+    display:grid; grid-template-columns:68px 1fr auto; gap:14px; align-items:start;
+    background:var(--black-2); border:1px solid var(--line); border-radius:4px;
+    padding:14px; margin-bottom:8px;
+  }
+  .ev.core{border-left:3px solid var(--amber); padding-left:12px;}
+  .ev.home{border-left:3px solid var(--orange); padding-left:12px; background:rgba(255,122,26,0.06);}
+  .ev-date{font-family:'Oswald',sans-serif; text-align:center; line-height:1; background:var(--card); border:1px solid var(--line); border-radius:3px; padding:8px 4px;}
+  .ev-date .d{font-size:26px; font-weight:700; color:var(--orange);}
+  .ev-date .w{font-size:11px; font-weight:600; color:var(--text-faint); text-transform:uppercase; letter-spacing:.06em; margin-top:4px;}
+  .ev-main{min-width:0;}
+  .ev-main h3{font-size:16px; font-weight:600; margin:0; line-height:1.25;}
+  .ev-main h3 a{color:var(--text); text-decoration:none; border-bottom:1px solid var(--line); transition:color .12s, border-color .12s;}
+  .ev-main h3 a:hover{color:var(--amber); border-color:var(--orange);}
+  .ev-where{color:var(--text-dim); font-size:13.5px; margin-top:3px;}
+  .ev-tags{display:flex; flex-wrap:wrap; gap:5px; margin-top:8px;}
+  .tag{font-size:11.5px; font-weight:600; padding:3px 8px; border-radius:3px; background:var(--card); color:var(--text-dim); border:1px solid var(--line);}
+  .tag.st{font-family:'Oswald',sans-serif; letter-spacing:.07em; color:var(--text);}
+  .tag.girls{background:rgba(255,179,71,0.12); color:var(--amber); border-color:transparent;}
+  .tag.note{background:rgba(255,122,26,0.14); color:var(--orange); border-color:transparent;}
+  .tag.home{background:var(--orange); color:#1a0e00; border-color:transparent;}
+  .tag.conf{background:rgba(255,122,26,0.14); color:var(--orange); border-color:transparent;}
+  .ev-note{font-size:13px; color:var(--text-faint); margin-top:7px; line-height:1.45;}
+  .ev-drive{font-family:'Oswald',sans-serif; font-weight:600; font-size:16px; text-align:right; white-space:nowrap; color:var(--text);}
+  .ev-drive small{display:block; font:500 11px 'Inter',sans-serif; color:var(--text-faint); margin-top:2px;}
+
+  .sch-empty{padding:30px 0; color:var(--text-faint); text-align:center; font-style:italic;}
+  .sch-notes{margin-top:36px; border-top:1px solid var(--line); padding-top:18px;}
+  .sch-notes h2{font-family:'Oswald',sans-serif; font-size:18px; text-transform:uppercase; letter-spacing:.05em; margin:0 0 10px; color:var(--orange);}
+  .sch-notes ul{margin:0; padding-left:18px; color:var(--text-dim); max-width:72ch; display:flex; flex-direction:column; gap:8px; font-size:13.5px; line-height:1.5;}
+  .sch-notes b{color:var(--text);}
+
   @media(max-width:640px){
     .wrap{padding:18px 14px 60px;}
 
@@ -317,6 +411,19 @@
     h1{font-size:26px;}
     .brand-eyebrow{font-size:10.5px; letter-spacing:.16em;}
   }
+
+  @media(max-width:640px){
+    .view-tab{flex:1; text-align:center; padding:12px 8px; font-size:15px;}
+    .sch-filters .sch-row{flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none;}
+    .sch-filters .sch-row::-webkit-scrollbar{display:none;}
+    .chip{flex:0 0 auto; white-space:nowrap; padding:9px 14px;}
+    .sch-count{margin-left:0;}
+    .sch-filters #schCountRow{flex-wrap:wrap;}
+    .ev{grid-template-columns:52px 1fr; gap:12px; padding:12px;}
+    .ev-date .d{font-size:22px;}
+    .ev-drive{grid-column:2; text-align:left;}
+    .ev-drive small{display:inline; margin-left:5px;}
+  }
 </style>
 </head>
 <body>
@@ -328,14 +435,61 @@
       <h1>The Chief <span>Standard</span></h1>
     </div>
     <div class="header-meta">
-      3 Levels &middot; 5 Positions<br>
+      Curriculum &middot; Schedule<br>
       Tap a technique to watch
     </div>
   </header>
 
-  <div class="lvl-tabs" id="lvlTabs"></div>
-  <div class="pos-tabs" id="posTabs"></div>
-  <div id="content"></div>
+  <div class="view-tabs" id="viewTabs">
+    <div class="view-tab active" data-view="curriculum">Curriculum</div>
+    <div class="view-tab" data-view="schedule">Schedule</div>
+  </div>
+
+  <div id="view-curriculum">
+    <div class="lvl-tabs" id="lvlTabs"></div>
+    <div class="pos-tabs" id="posTabs"></div>
+    <div id="content"></div>
+  </div>
+
+  <div id="view-schedule" hidden>
+    <p class="sch-lede">Open youth tournaments (Tot through Intermediate / 6U&ndash;14U) and girls divisions within reach of Burlington and Camden County, plus a few worth the trip into PA, MD, DE and beyond. Our SJWL duals and league tournaments are on their own tab.</p>
+    <div class="sch-stats" id="schStats"></div>
+
+    <div class="pos-tabs" id="schTabs">
+      <div class="pos-tab active" data-tab="l">Our SJWL Schedule</div>
+      <div class="pos-tab" data-tab="t">Other Tournaments</div>
+    </div>
+
+    <div id="schPanelL">
+      <p class="sch-lede">Marlton's South Jersey Wrestling League season: five duals, then the varsity and JV league tournaments. Open tournaments on the same day are listed under each date so you can spot clashes.</p>
+      <div id="schLeague"></div>
+    </div>
+
+    <div id="schPanelT" hidden>
+      <div class="sch-filters">
+        <div class="sch-row"><span class="lbl">State</span><span id="schStates" class="sch-row"></span></div>
+        <div class="sch-row" id="schCountRow"><span class="lbl">Show</span>
+          <div class="chip" id="schGirls">Girls Divisions</div>
+          <div class="chip" id="schNear">About 1 Hr Drive</div>
+          <span class="sch-count" id="schCount"></span>
+        </div>
+      </div>
+      <div id="schList"></div>
+
+      <section class="sch-notes">
+        <h2>Before You Register</h2>
+        <ul>
+          <li><b>Confirm every date and division with the host.</b> Dates come from current listings on WrestlingTournaments.org, FloArena, USAW-NJ and the hosts' own pages as of Oct 6, 2026. Youth flyers change, and some events cap brackets early.</li>
+          <li><b>NJ state path:</b> USAW-NJ runs boys and girls scholastic qualifiers starting in January, leading to the state finals March 12&ndash;14, 2027. The full 2027 qualifier list isn't posted yet; last season had nine, including one at Washington Township HS (Sewell). Every wrestler needs a current USA Wrestling card.</li>
+          <li><b>League events:</b> our SJWL duals and league tournaments are on the <b>Our SJWL Schedule</b> tab. The SJMSWL tournament is for middle-school league teams.</li>
+          <li><b>Residency-restricted, not listed:</b> PJW Youth States (PA, Mar 19&ndash;21) and the MSWA Maryland Folkstyle States (Feb 14) are limited to in-state wrestlers who went through their qualifiers.</li>
+          <li><b>&ldquo;Girls divisions&rdquo;</b> means the host lists separate youth girls brackets (for example Girls K&ndash;8). Some events also run high school and open brackets on the same day; register in the youth divisions.</li>
+          <li><b>Left off as high school only:</b> Escape the Rock, Abington Friends Girls Jamboree, Garden State Classic (Peddie), Phil Carbonetta, Halloween Havoc girls, Carlo Ritacco girls, Bombers Blizzard Brawl girls, Rapid Fire Round Robin, Scott Stevens, Berkeley Bash, Ken Berlett and Davison Girls Classic.</li>
+          <li>Drive times are estimates from Cherokee High School (Marlton) without traffic.</li>
+        </ul>
+      </section>
+    </div>
+  </div>
 
   <footer>THE CHIEF STANDARD</footer>
 </div>
@@ -684,6 +838,156 @@ function renderContent(){
 renderLvlTabs();
 renderPosTabs();
 renderContent();
+
+/* ===================== SCHEDULE ===================== */
+// date (start), end, name, venue, city, state, drive(min), girls, core, tags[], note, url
+const EVENTS = [
+ ["2026-10-18",null,"Primal Showdown","St. Georges Technical HS","Middletown","DE",60,true,false,["6U–14U","Girls K–8"],"Also runs HS and open brackets; register in the youth divisions.","https://de.wrestlingtournaments.org/view.cfm?ID=118144"],
+ ["2026-10-24","2026-10-25","GTE Halloween Classic","William Penn HS","New Castle","DE",50,true,false,["6U–14U","Girls K–8","Duals + individual"],"","https://de.wrestlingtournaments.org/view.cfm?ID=117474"],
+ ["2026-11-14",null,"The Now Famous Fall Brawl","McDonogh School","Owings Mills","MD",130,false,false,["6U–12U","USAW sanctioned"],"","https://md.wrestlingtournaments.org/view.cfm?ID=118139"],
+ ["2026-11-28",null,"St. Georges Kickoff Classic","St. Georges Technical HS","Middletown","DE",60,true,false,["6U–14U","Girls K–8"],"","https://de.wrestlingtournaments.org/view.cfm?ID=118141"],
+ ["2026-12-05","2026-12-06","Rumble at the River","RiverWinds Community Center","West Deptford","NJ",30,true,true,["Tot–Intermediate","Girls brackets"],"Closest full youth card with its own girls division.","https://nj.wrestlingtournaments.org/view.cfm?ID=117738"],
+ ["2026-12-06",null,"Neshaminy Youth Wrestling Tournament","Maple Point Middle School","Langhorne","PA",40,false,true,["Youth"],"","https://arena.flowrestling.org/"],
+ ["2026-12-06",null,"Smyrna Little Wrestlers Tournament","Smyrna HS","Smyrna","DE",75,true,false,["Youth"],"","https://de.wrestlingtournaments.org/view.cfm?ID=118140"],
+ ["2026-12-13",null,"Buccaneer Holiday Classic","Milford Central Academy","Milford","DE",105,true,false,["6U–14U","Girls K–8"],"","https://de.wrestlingtournaments.org/view.cfm?ID=118145"],
+ ["2026-12-26",null,"Kellen Bischoff Memorial","Stafford Township","Stafford Twp.","NJ",55,false,false,["Junior high only","Holiday break"],"Middle-school wrestlers only.","https://nj.wrestlingtournaments.org/view.cfm?ID=117646"],
+ ["2026-12-27",null,"POWERade Junior & Girls","Canon-McMillan HS","Canonsburg","PA",300,true,false,["Destination","Boys 8U–12U","Girls Elementary"],"Youth and girls' elementary day is Dec 27; older divisions wrestle later in the week. An overnight trip.","https://www.papowerwrestling.com/poweradewrestling/"],
+ ["2026-12-29",null,"Gloucester City Middle School Tournament","Gloucester City MS","Gloucester City","NJ",25,true,false,["Middle school"],"","https://nj.wrestlingtournaments.org/view.cfm?ID=117582"],
+ ["2027-01-09",null,"Tommy Dell Novice Tournament","Coppermine Pantherplex","Hampstead","MD",135,false,false,["Novice","Bantam–Intermediate"],"","https://md.wrestlingtournaments.org/view.cfm?ID=117663"],
+ ["2027-01-10",null,"Wall Knights Takedown Pediatric Cancer","Wall HS","Wall Twp.","NJ",60,true,false,["6U–14U","Novice + open","Girls 5–7 / 8–10 / 11–14"],"Youth only, with novice brackets for first-years and three girls age groups.","https://nj.wrestlingtournaments.org/view.cfm?ID=117745"],
+ ["2027-01-10",null,"USAW-NJ Youth State Qualifier","Old Bridge HS","Matawan","NJ",60,true,false,["State qualifier","USA card required"],"One of the first 2027 qualifiers posted.","https://nj.wrestlingtournaments.org/view.cfm?ID=119556"],
+ ["2027-01-10",null,"Lebanon Wrestling Tournament","Lebanon HS","Lebanon","PA",110,false,false,["Youth open & novice"],"","https://pa.wrestlingtournaments.org/view.cfm?ID=107488"],
+ ["2027-01-22","2027-01-24","USA Wrestling Kids Folkstyle Nationals","Allen County War Memorial Coliseum","Fort Wayne","IN",570,true,false,["National","8U–14U","Destination"],"For your top kids; coach needs Copper/Bronze certification.","https://usawrestlingevents.com/"],
+ ["2027-01-24",null,"Ram Tough Youth Tournament","Southern Regional HS","Stafford Twp.","NJ",55,true,true,["Tot–Intermediate","Girls Tot–Intermediate","$30"],"Full girls ladder at every age group.","https://nj.wrestlingtournaments.org/view.cfm?ID=117414"],
+ ["2027-01-24",null,"USAW-NJ Qualifier — Toms River","Toms River HS East","Toms River","NJ",55,true,false,["State qualifier","USA card required"],"","https://nj.wrestlingtournaments.org/view.cfm?ID=119597"],
+ ["2027-01-31",null,"SJMSWL Tournament","Moorestown HS","Moorestown","NJ",15,false,false,["Middle school league"],"For South Jersey Middle School league teams.","https://nj.wrestlingtournaments.org/view.cfm?ID=117420"],
+ ["2027-03-12","2027-03-14","USAW-NJ Scholastic State Championships","CURE Insurance Arena","Trenton","NJ",40,true,true,["State finals","Boys & girls","Qualifier required"],"Qualifier sites and flyer still to be posted by USAW-NJ.","https://www.usawnj.org/scholastic"],
+ ["2027-03-14",null,"Defend the Den Novice","Queen Anne's County HS","Centreville","MD",105,false,false,["Novice","6U–14U"],"Open bracket runs Mar 15.","https://md.wrestlingtournaments.org/view.cfm?ID=118237"],
+ ["2027-03-26","2027-03-28","War at the Shore Folkstyle Nationals","Wildwoods Convention Center","Wildwood","NJ",90,true,true,["Season finale","Tot–Intermediate","Girls K–5 & MS","2nd-chance brackets"],"Second-chance brackets keep newer kids wrestling all weekend. Register only in the youth divisions.","https://nj.wrestlingtournaments.org/view.cfm?ID=118010"],
+];
+
+// date, label, site, type, home, drive
+const LEAGUE = [
+ ["2026-12-20","Dual @ Haddon Township","Haddon Township HS, Westmont","Dual",false,20],
+ ["2027-01-10","Dual @ Deptford","Deptford Township HS, Deptford","Dual",false,30],
+ ["2027-01-17","Dual @ Haddon Township","Haddon Township HS, Westmont","Dual",false,20],
+ ["2027-01-23","Dual @ Delsea","Delsea Regional HS, Franklinville","Dual",false,40],
+ ["2027-01-31","Home dual @ Cherokee","Cherokee HS, Marlton","Dual",true,0],
+ ["2027-02-14","SJWL Varsity Tournament","Moorestown / Cinnaminson","Varsity tournament",false,15],
+ ["2027-02-21","SJWL JV Tournament","Clearview Regional HS, Mullica Hill","JV tournament",false,35],
+];
+
+const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
+const DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const schState={st:"All",girls:false,near:false};
+const pd=s=>{const [y,m,dd]=s.split("-").map(Number);return new Date(y,m-1,dd)};
+const fmtDrive=m=>m<60?m+" min":(Math.floor(m/60)+" hr"+(m%60?" "+(m%60):""));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function schStats(){
+  const g=EVENTS.filter(e=>e[7]).length;
+  const sts=new Set(EVENTS.map(e=>e[5])).size;
+  document.getElementById("schStats").innerHTML=
+    `<span><b>${EVENTS.length}</b>events</span><span><b>${g}</b>with girls divisions</span><span><b>${LEAGUE.length}</b>SJWL dates</span><span><b>${sts}</b>states</span><span><b>Mar 12–14</b>NJ states</span>`;
+}
+
+function buildStateChips(){
+  const wrap=document.getElementById("schStates");
+  wrap.innerHTML="";
+  ["All","NJ","PA","MD","DE","Other"].forEach(s=>{
+    const b=document.createElement("div");
+    b.className="chip"+(schState.st===s?" active":"");
+    b.textContent=s;
+    b.onclick=()=>{schState.st=s;renderSchedule();};
+    wrap.appendChild(b);
+  });
+}
+
+function renderSchedule(){
+  buildStateChips();
+  document.getElementById("schGirls").classList.toggle("active",schState.girls);
+  document.getElementById("schNear").classList.toggle("active",schState.near);
+
+  const list=EVENTS.filter(e=>{
+    if(schState.st==="Other"&&["NJ","PA","MD","DE"].includes(e[5]))return false;
+    if(!["All","Other"].includes(schState.st)&&e[5]!==schState.st)return false;
+    if(schState.girls&&!e[7])return false;
+    if(schState.near&&e[6]>60)return false;
+    return true;
+  }).sort((a,b)=>a[0].localeCompare(b[0])||a[6]-b[6]);
+
+  document.getElementById("schCount").textContent=list.length+" of "+EVENTS.length+" shown";
+
+  const out=[];let cur="";
+  list.forEach(e=>{
+    const s=pd(e[0]),key=s.getFullYear()+"-"+s.getMonth();
+    if(key!==cur){
+      if(cur)out.push("</section>");
+      cur=key;
+      const n=list.filter(x=>{const t=pd(x[0]);return t.getFullYear()+"-"+t.getMonth()===key}).length;
+      out.push(`<section class="sch-month"><h2>${MONTHS[s.getMonth()]} ${s.getFullYear()}<small>${n} event${n>1?"s":""}</small></h2>`);
+    }
+    const end=e[1]?pd(e[1]):null;
+    const dayTxt=end?`${s.getDate()}–${end.getDate()}`:s.getDate();
+    const wTxt=end?`${DOW[s.getDay()]}–${DOW[end.getDay()]}`:DOW[s.getDay()];
+    const tags=[`<span class="tag st">${e[5]}</span>`];
+    const lg=LEAGUE.find(x=>x[0]===e[0]||(e[1]&&x[0]>=e[0]&&x[0]<=e[1]));
+    if(lg)tags.push(`<span class="tag conf">Same day as SJWL: ${esc(lg[1].replace("Dual @ ","@ "))}</span>`);
+    if(e[7])tags.push(`<span class="tag girls">Girls divisions</span>`);
+    e[9].forEach(t=>tags.push(`<span class="tag${/qualif|league|selection|required|Destination/i.test(t)?" note":""}">${esc(t)}</span>`));
+    out.push(`<article class="ev${e[8]?" core":""}">
+      <div class="ev-date"><div class="d">${dayTxt}</div><div class="w">${wTxt}</div></div>
+      <div class="ev-main"><h3><a href="${e[11]}" target="_blank" rel="noopener noreferrer">${esc(e[2])}</a></h3>
+        <div class="ev-where">${esc(e[3])}${e[4]?" · "+esc(e[4])+", "+e[5]:""}</div>
+        <div class="ev-tags">${tags.join("")}</div>
+        ${e[10]?`<div class="ev-note">${esc(e[10])}</div>`:""}</div>
+      <div class="ev-drive">~${fmtDrive(e[6])}<small>from Cherokee</small></div>
+    </article>`);
+  });
+  if(cur)out.push("</section>");
+  document.getElementById("schList").innerHTML=list.length?out.join(""):`<p class="sch-empty">No events match these filters. Try another state or turn off a filter.</p>`;
+}
+
+function renderLeague(){
+  const rows=LEAGUE.map(x=>{
+    const s=pd(x[0]);
+    const same=EVENTS.filter(e=>e[0]===x[0]||(e[1]&&x[0]>=e[0]&&x[0]<=e[1])).map(e=>esc(e[2]));
+    const tags=[`<span class="tag st">${x[3]}</span>`];
+    if(x[4])tags.push(`<span class="tag home">Home</span>`);
+    return `<article class="ev${x[4]?" home":""}">
+      <div class="ev-date"><div class="d">${s.getDate()}</div><div class="w">${MONTHS[s.getMonth()].slice(0,3)} · ${DOW[s.getDay()]}</div></div>
+      <div class="ev-main"><h3>${esc(x[1])}</h3><div class="ev-where">${esc(x[2])}</div>
+        <div class="ev-tags">${tags.join("")}</div>
+        ${same.length?`<div class="ev-note">Same day: ${same.join(", ")}</div>`:""}</div>
+      <div class="ev-drive">${x[5]?"~"+fmtDrive(x[5]):"Home"}<small>${x[5]?"from Cherokee":""}</small></div>
+    </article>`;
+  });
+  document.getElementById("schLeague").innerHTML=rows.join("");
+}
+
+function showSchTab(t){
+  const lg=t==="l";
+  document.querySelectorAll("#schTabs .pos-tab").forEach(b=>b.classList.toggle("active",b.dataset.tab===t));
+  document.getElementById("schPanelL").hidden=!lg;
+  document.getElementById("schPanelT").hidden=lg;
+}
+
+function showView(v){
+  document.querySelectorAll("#viewTabs .view-tab").forEach(b=>b.classList.toggle("active",b.dataset.view===v));
+  document.getElementById("view-curriculum").hidden=(v!=="curriculum");
+  document.getElementById("view-schedule").hidden=(v!=="schedule");
+  window.scrollTo(0,0);
+}
+
+document.querySelectorAll("#viewTabs .view-tab").forEach(b=>b.onclick=()=>showView(b.dataset.view));
+document.querySelectorAll("#schTabs .pos-tab").forEach(b=>b.onclick=()=>showSchTab(b.dataset.tab));
+document.getElementById("schGirls").onclick=()=>{schState.girls=!schState.girls;renderSchedule();};
+document.getElementById("schNear").onclick=()=>{schState.near=!schState.near;renderSchedule();};
+
+schStats();
+renderSchedule();
+renderLeague();
+if(location.hash==="#schedule")showView("schedule");
 </script>
 
 </body>
