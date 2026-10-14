@@ -308,6 +308,10 @@
   .sch-lede{color:var(--text-dim); font-size:14px; line-height:1.55; max-width:68ch; margin:0 0 14px;}
   .sch-stats{display:flex; flex-wrap:wrap; gap:8px 22px; margin-bottom:22px; font-size:12.5px; color:var(--text-faint);}
   .sch-stats b{font-family:'Oswald',sans-serif; font-size:22px; color:var(--orange); margin-right:5px; font-weight:600;}
+  .pos-tabs.sch-tabs{gap:10px; margin-bottom:22px; padding-bottom:20px; flex-wrap:nowrap;}
+  .pos-tabs.sch-tabs .pos-tab{flex:1 1 0; text-align:center; font-size:17px; padding:15px 18px; border-radius:12px; letter-spacing:.06em; border-width:2px; white-space:normal;}
+  .pos-tabs.sch-tabs .pos-tab.active{color:var(--black); background:var(--orange); border-color:var(--orange);}
+  @media (max-width:640px){.pos-tabs.sch-tabs{overflow:visible;} .pos-tabs.sch-tabs .pos-tab{font-size:14px; padding:14px 8px; flex:1 1 0;}}
 
   .sch-filters{
     position:sticky; top:0; z-index:5;
@@ -452,13 +456,14 @@
   </div>
 
   <div id="view-schedule">
-    <p class="sch-lede">Open youth tournaments (Tot through Intermediate / 6U&ndash;14U) and girls divisions within reach of Burlington and Camden County, plus a few worth the trip into PA, MD, DE and beyond. Our SJWL duals and league tournaments are on their own tab.</p>
-    <div class="sch-stats" id="schStats"></div>
-
-    <div class="pos-tabs" id="schTabs">
+    <div class="pos-tabs sch-tabs" id="schTabs">
       <div class="pos-tab active" data-tab="l">Our SJWL Schedule</div>
       <div class="pos-tab" data-tab="t">Other Tournaments</div>
     </div>
+
+    <p class="sch-lede">Open youth tournaments (Tot through Intermediate / 6U&ndash;14U) and girls divisions within reach of Burlington and Camden County, plus a few worth the trip into PA, MD, DE and beyond. Our SJWL duals and league tournaments are on their own tab.</p>
+    <div class="sch-stats" id="schStats"></div>
+
 
     <div id="schPanelL">
       <p class="sch-lede">Marlton's South Jersey Wrestling League season: five duals, then the varsity and JV league tournaments. Open tournaments on the same day are listed under each date so you can spot clashes.</p>
